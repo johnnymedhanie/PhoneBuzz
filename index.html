@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>phonebuzzing</title>
+	<!-- Fav icon -->
+	<link rel="icon" type="image/png" href="./templates/'favicon.png')">
+
+	<!-- Fonts -->
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+
+
+	<!-- jQuery -->
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+    <!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	<!-- Custom CSS -->
+	<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+</head>
+
+<body>
+	<h1>Phone Buzz</h1>
+
+	<div class="container text-center main">
+    <br><br><br>
+		<form action="/call" method="POST">
+	  		<input type="text" class="custom-input" id="phonenum" type="tel" pattern="(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})" name="phone" placeholder="Ex. 1234567890 or 123-456-7890"><br><br>
+				<button class="btn draw-border" type="submit" >PhoneBuzz Me!</button>
+
+		</form>
+		<br>
+	</div>
+</body>
+</html>
